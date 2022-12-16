@@ -79,4 +79,4 @@ function merge(arr1, arr2) {
   return results;
 }
 
-mergeSort(data.results.payload);
+console.log(mergeSort(data.results.payload));
