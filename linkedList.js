@@ -97,6 +97,16 @@ class SinglyLinkedList {
 
     return current;
   }
+
+  set(index, val) {
+    let foundNode = this.get(index);
+
+    if (foundNode) {
+      foundNode.val = val;
+    }
+
+    return this;
+  }
 }
 
 const newLinkedList = new SinglyLinkedList();
@@ -106,4 +116,4 @@ newLinkedList.push(39);
 newLinkedList.shift();
 newLinkedList.unshift(1);
 
-console.log(newLinkedList);
+console.log(newLinkedList.set(1, 13));
