@@ -49,8 +49,30 @@ class SinglyLinkedList {
     }
     return current;
   }
+
+  shift() {
+    if (!this.head) {
+      return undefined;
+    }
+
+    let removedNode = this.head;
+    this.head = removedNode.next;
+
+    this.length--;
+
+    if (!this.length) {
+      this.head = null;
+      this.tail = null;
+    }
+
+    return removedNode;
+  }
 }
 
 const newLinkedList = new SinglyLinkedList();
+newLinkedList.push(3);
+newLinkedList.push(33);
+newLinkedList.push(39);
+newLinkedList.shift();
 
 console.log(newLinkedList);
